@@ -12,6 +12,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import animate from "../Animate";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -40,9 +42,17 @@ const FullScreenDialog = ({ open, onClose, data }) => {
       open={open}
       onClose={onClose}
       TransitionComponent={Transition}
-      sx={{ height }}
+      sx={{
+        height,
+      }}
     >
-      <Box sx={{ flex: 1, order: isMobile ? 1 : 2 }}>
+      <Box
+        sx={{
+          flex: 1,
+          order: isMobile ? 1 : 2,
+          animation: `${animate} 5s ease-in-out infinite alternate both`,
+        }}
+      >
         <Swiper
           centeredSlides={true}
           pagination={{
