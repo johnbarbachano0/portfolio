@@ -78,7 +78,7 @@ module.exports = {
         }
       ),
       queryInterface.createTable(
-        "skills",
+        "Skills",
         {
           id: {
             type: Sequelize.INTEGER,
@@ -113,7 +113,7 @@ module.exports = {
         }
       ),
       queryInterface.createTable(
-        "testimonials",
+        "Testimonials",
         {
           id: {
             type: Sequelize.INTEGER,

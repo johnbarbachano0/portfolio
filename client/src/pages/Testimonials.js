@@ -30,8 +30,8 @@ const Testimonials = () => {
   });
   const [postTestimonial, { isLoading }] = usePostTestimonialMutation();
   const { height } = useWindowDimensions();
-  const { isMobile } = useCommon();
-  const image = isMobile ? rm1 : r1;
+  const { isMid } = useCommon();
+  const image = isMid ? rm1 : r1;
 
   const handleChange = (evt, newVal) => {
     if (newVal) {
@@ -103,11 +103,11 @@ const Testimonials = () => {
                 defaultValue={items.find((value) => value.label[0])}
                 onChange={handleChange}
                 disabled={isLoading}
-                sx={{ width: "50%", my: 1 }}
+                sx={{ width: isMid ? "100%" : "50%", my: 1 }}
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    label="Select Role"
+                    label="Your Role"
                     variant="standard"
                     error={errors?.role ? true : false}
                     helperText={errors?.role?.message || ""}
@@ -123,7 +123,7 @@ const Testimonials = () => {
             name="createdBy"
             render={({ field: { value } }) => (
               <TextField
-                label="Enter Name"
+                label="Your Name"
                 name="createdBy"
                 variant="standard"
                 sx={{ my: 1 }}
@@ -131,8 +131,8 @@ const Testimonials = () => {
                 onChange={handleChange}
                 error={errors.createdBy ? true : false}
                 helperText={errors?.createdBy?.message || ""}
-                inputProps={{ maxLength: 20 }}
-                autoComplete="off"
+                inputProps={{ maxLength: 50 }}
+                autoComplete="new-password"
                 disabled={isLoading}
               />
             )}

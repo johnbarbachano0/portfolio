@@ -3,8 +3,6 @@ const express = require("express");
 const app = express();
 const session = require("express-session");
 const cors = require("cors");
-const morgan = require("morgan");
-const helmet = require("helmet");
 const middlewares = require("./middlewares/errorHandlers");
 const db = require("./models");
 const passport = require("passport");
@@ -19,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 
 //Morgan Helmet Cors
 if (process.env.NODE_ENV === "development") {
+  const morgan = require("morgan");
+  const helmet = require("helmet");
   app.use(morgan("common"));
   app.use(helmet());
 }
@@ -57,6 +57,8 @@ const MaintenanceRouter = require("./routes/Maintenance");
 app.use("/maintenance", MaintenanceRouter);
 const TestimonialsRouter = require("./routes/Testimonials");
 app.use("/testimonials", TestimonialsRouter);
+const GuestsRouter = require("./routes/Guests");
+app.use("/guest", GuestsRouter);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
