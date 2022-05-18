@@ -11,15 +11,6 @@ export const emailApi = createApi({
   }),
   tagTypes: ["Email"],
   endpoints: (builder) => ({
-    // postEmail: builder.mutation({
-    //   query: ({ data }) => ({
-    //     url: `${process.env.REACT_APP_SERVER}/maintenance/emailtest`,
-    //     method: "post",
-    //     headers,
-    //     body: { ...data, path: `${process.env.REACT_APP_EMAIL_SERVER}/send` },
-    //   }),
-    //   invalidatesTags: ["Maintenance"],
-    // }),
     postEmail: builder.mutation({
       query: ({ data }) => ({
         url: `/send`,

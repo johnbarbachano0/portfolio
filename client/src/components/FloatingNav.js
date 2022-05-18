@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useCallback } from "react";
-import Box from "@mui/material/Box";
+import { AppBar, Box } from "@mui/material";
 import useCommon from "../components/useCommon";
 import { ButtonGroup, IconButton, Tooltip } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
@@ -15,6 +15,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import PeopleAltRoundedIcon from "@mui/icons-material/PeopleAltRounded";
 import { keyframes } from "@mui/material";
+import animate from "./Animate";
 
 const pop = keyframes`
   0% {
@@ -74,6 +75,29 @@ const FloatingNav = () => {
     { icon: <ArrowDownwardRoundedIcon />, name: "End", value: 8 },
   ];
 
+  const buttons = () => (
+    <ButtonGroup size="small" sx={{ justifyContent: "center" }}>
+      {items.map((item, i) => (
+        <Tooltip title={item.name} key={i} arrow>
+          <IconButton
+            color={"info"}
+            size={"small"}
+            onClick={() => handleClick(item.value)}
+            sx={{
+              "&:hover": {
+                animation: `${pop} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`,
+              },
+              margin: isMobile ? 0.75 : 0.75,
+              my: 1.5,
+            }}
+          >
+            {item?.icon}
+          </IconButton>
+        </Tooltip>
+      ))}
+    </ButtonGroup>
+  );
+
   const handleClick = (val) => {
     setCurr(val);
     dispatch(setCurrRef(val));
@@ -88,7 +112,15 @@ const FloatingNav = () => {
     executeScroll();
   });
 
-  return (
+  return isMobile ? (
+    <AppBar
+      position="fixed"
+      color="primary"
+      sx={{ top: "auto", bottom: 0, zIndex: hideNav ? -10 : 10 }}
+    >
+      {buttons()}
+    </AppBar>
+  ) : (
     <Box
       sx={{
         display: "flex",
@@ -112,24 +144,7 @@ const FloatingNav = () => {
       }}
       elevation={10}
     >
-      <ButtonGroup size="small">
-        {items.map((item, i) => (
-          <Tooltip title={item.name} key={i} arrow>
-            <IconButton
-              color={"info"}
-              size={"small"}
-              onClick={() => handleClick(item.value)}
-              sx={{
-                "&:hover": {
-                  animation: `${pop} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`,
-                },
-              }}
-            >
-              {item?.icon}
-            </IconButton>
-          </Tooltip>
-        ))}
-      </ButtonGroup>
+      {buttons()}
     </Box>
   );
 };

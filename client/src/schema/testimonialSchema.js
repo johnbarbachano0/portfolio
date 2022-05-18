@@ -5,7 +5,7 @@ export const testimonialSchema = yup.object().shape({
     .string()
     .required("Required.")
     .min(1, "At least 1 char.")
-    .max(20, "Max of 20 chars."),
+    .max(50, "Max of 50 chars."),
   testimonial: yup
     .string()
     .required("Required.")
