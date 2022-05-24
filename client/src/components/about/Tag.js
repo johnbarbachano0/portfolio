@@ -40,6 +40,10 @@ const Tag = ({ icon, title, animateStart, delay, ...props }) => {
         sx={{
           fontSize: 12,
           fontWeight: "bold",
+          transition: "1s",
+          "&:hover": {
+            letterSpacing: 1.5,
+          },
         }}
       >
         {title}

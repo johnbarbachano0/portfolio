@@ -13,7 +13,7 @@ const CustomCard = ({ label, icon, ...props }) => {
         maxWidth: isLarge ? "48%" : "32%",
         my: 0.25,
         mx: 0.1,
-        opacity: 0.8,
+        opacity: 0.9,
         transition: "1s",
         "&:hover": {
           opacity: 1,
