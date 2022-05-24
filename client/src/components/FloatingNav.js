@@ -15,7 +15,6 @@ import CodeIcon from "@mui/icons-material/Code";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import PeopleAltRoundedIcon from "@mui/icons-material/PeopleAltRounded";
 import { keyframes } from "@mui/material";
-import animate from "./Animate";
 
 const pop = keyframes`
   0% {
@@ -76,7 +75,10 @@ const FloatingNav = () => {
   ];
 
   const buttons = () => (
-    <ButtonGroup size="small" sx={{ justifyContent: "center" }}>
+    <ButtonGroup
+      size="small"
+      sx={{ justifyContent: "center", pb: isMobile ? 1 : 0 }}
+    >
       {items.map((item, i) => (
         <Tooltip title={item.name} key={i} arrow>
           <IconButton
@@ -88,7 +90,6 @@ const FloatingNav = () => {
                 animation: `${pop} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;`,
               },
               margin: isMobile ? 0.75 : 0.75,
-              my: 1.5,
             }}
           >
             {item?.icon}
@@ -116,7 +117,11 @@ const FloatingNav = () => {
     <AppBar
       position="fixed"
       color="primary"
-      sx={{ top: "auto", bottom: 0, zIndex: hideNav ? -10 : 10 }}
+      sx={{
+        top: "auto",
+        bottom: 0,
+        zIndex: hideNav ? -10 : 10,
+      }}
     >
       {buttons()}
     </AppBar>

@@ -39,6 +39,27 @@ import port2 from "../../assets/app_image/port2.PNG";
 import port3 from "../../assets/app_image/port3.PNG";
 import port4 from "../../assets/app_image/port4.PNG";
 import port5 from "../../assets/app_image/port5.PNG";
+import port6 from "../../assets/app_image/port6.PNG";
+import port7 from "../../assets/app_image/port7.PNG";
+import port8 from "../../assets/app_image/port8.PNG";
+import port9 from "../../assets/app_image/port9.PNG";
+import port10 from "../../assets/app_image/port10.PNG";
+import port11 from "../../assets/app_image/port11.PNG";
+import hop1 from "../../assets/app_image/hop1.PNG";
+import hop2 from "../../assets/app_image/hop2.PNG";
+import hop3 from "../../assets/app_image/hop3.PNG";
+import hop4 from "../../assets/app_image/hop4.PNG";
+import hop5 from "../../assets/app_image/hop5.PNG";
+import hop6 from "../../assets/app_image/hop6.PNG";
+import hop7 from "../../assets/app_image/hop7.PNG";
+import hop8 from "../../assets/app_image/hop8.PNG";
+import hop9 from "../../assets/app_image/hop9.PNG";
+import hop10 from "../../assets/app_image/hop10.PNG";
+import hop11 from "../../assets/app_image/hop11.PNG";
+import hop12 from "../../assets/app_image/hop12.PNG";
+import hop13 from "../../assets/app_image/hop13.PNG";
+import hop14 from "../../assets/app_image/hop14.PNG";
+import hop15 from "../../assets/app_image/hop15.PNG";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -62,39 +83,138 @@ const Portfolio = () => {
   const data = [
     {
       name: "Time And Attendance",
-      description: "App for a company's time and attendance.",
+      description: "Mobile App for a company's time and attendance.",
       github: "https://github.com/johnbarbachano0/rn-timeAndAttendance",
       figma:
         "https://www.figma.com/file/0ewhV8CEbez0KmSbupbu0q/Time-and-Attendance-App",
       image: [tna1, tna2, tna3, tna4, tna5, tna6, tna7, tna8, tna9, tna10],
       tag: ["Mobile", "GPS", "Dark/Light Theme"],
       type: "mobile",
+      tech: [
+        "MySQL",
+        "ExpressJS",
+        "React Native",
+        "NodeJS",
+        "React Native Paper",
+        "React Hook Form",
+        "Yup",
+        "Redux Toolkit",
+        "React Navigation",
+        "Sequelize JS",
+        "REST API",
+        "CSS Animations",
+      ],
     },
     {
       name: "Wander",
-      description: "App to track all travel memories.",
+      description: "Mobile App to track all travel memories.",
       github: "https://github.com/johnbarbachano0/rn-wander",
       image: [wan1, wan2, wan3, wan4, wan5],
       tag: ["Mobile", "Local Storage", "GPS", "Dark/Light Theme"],
       type: "mobile",
+      tech: [
+        "SQLite",
+        "React Native",
+        "React Native Paper",
+        "React Hook Form",
+        "Yup",
+        "React Navigation",
+        "Sequelize JS",
+      ],
     },
     {
       name: "Snip",
-      description: "App for note taking, live chat and important links.",
+      description: "Web App for note taking, live chat and important links.",
       site: "https://sn1p.herokuapp.com",
       github: "https://github.com/johnbarbachano0/snipv2.0",
       image: [snip1, snip2, snip3, snip4, snip5, snip6, snip7, snip8, snip9],
       tag: ["Web", "Mobile Friendly", "Dark/Light Theme", "Social Login"],
       type: "web",
+      tech: [
+        "MySQL",
+        "ExpressJS",
+        "ReactJS",
+        "NodeJS",
+        "Material UI",
+        "React Hook Form",
+        "Yup",
+        "Redux Toolkit",
+        "React Route",
+        "SequelizeJS",
+        "REST API",
+        "PassportJS",
+        "Axios",
+      ],
     },
     {
       name: "Portfolio",
-      description: "App for my personal website.",
+      description: "Web App for my personal website.",
       site: "http://localhost:6005/",
       github: "https://github.com/johnbarbachano0/r-portfolio",
-      image: [port1, port2, port3, port4, port5],
+      image: [
+        port1,
+        port2,
+        port3,
+        port4,
+        port5,
+        port6,
+        port7,
+        port8,
+        port9,
+        port10,
+        port11,
+      ],
       tag: ["Web", "Mobile Friendly", "Dark/Light Theme"],
       type: "web",
+      tech: [
+        "MySQL",
+        "ExpressJS",
+        "ReactJS",
+        "NodeJS",
+        "Material UI",
+        "React Hook Form",
+        "Yup",
+        "Redux Toolkit",
+        "React Route",
+        "SequelizeJS",
+        "SwiperJS",
+        "REST API",
+        "CSS Animations",
+      ],
+    },
+    {
+      name: "Hoppers",
+      description:
+        "Mobile App for shopping (Phase 1 - Order only, no payment.).",
+      github: "https://github.com/johnbarbachano0/rn-shop-app",
+      image: [
+        hop1,
+        hop2,
+        hop3,
+        hop4,
+        hop5,
+        hop6,
+        hop7,
+        hop8,
+        hop9,
+        hop10,
+        hop11,
+        hop12,
+        hop13,
+        hop14,
+        hop15,
+      ],
+      tag: ["Mobile", "Firebase RealtimeDB", "Dark/Light Theme"],
+      type: "mobile",
+      tech: [
+        "Firebase RealtimeDB",
+        "React Native",
+        "React Native Paper",
+        "React Hook Form",
+        "Yup",
+        "Redux Toolkit",
+        "React Navigation",
+      ],
     },
   ];
 
