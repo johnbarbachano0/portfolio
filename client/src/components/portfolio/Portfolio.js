@@ -60,6 +60,13 @@ import hop12 from "../../assets/app_image/hop12.PNG";
 import hop13 from "../../assets/app_image/hop13.PNG";
 import hop14 from "../../assets/app_image/hop14.PNG";
 import hop15 from "../../assets/app_image/hop15.PNG";
+import app1 from "../../assets/app_image/app1.PNG";
+import app2 from "../../assets/app_image/app2.PNG";
+import app3 from "../../assets/app_image/app3.PNG";
+import app4 from "../../assets/app_image/app4.PNG";
+import app5 from "../../assets/app_image/app5.PNG";
+import app6 from "../../assets/app_image/app6.PNG";
+import app7 from "../../assets/app_image/app7.PNG";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -86,7 +93,7 @@ const Portfolio = () => {
       description: "Mobile App for a company's time and attendance.",
       github: "https://github.com/johnbarbachano0/rn-timeAndAttendance",
       figma:
-        "https://www.figma.com/file/0ewhV8CEbez0KmSbupbu0q/Time-and-Attendance-App",
+        "https://www.figma.com/file/0ewhV8CEbez0KmSbupbu0q/Time-and-Attendance-App?node-id=4%3A36",
       image: [tna1, tna2, tna3, tna4, tna5, tna6, tna7, tna8, tna9, tna10],
       tag: ["Mobile", "GPS", "Dark/Light Theme"],
       type: "mobile",
@@ -139,7 +146,7 @@ const Portfolio = () => {
         "React Hook Form",
         "Yup",
         "Redux Toolkit",
-        "React Route",
+        "React Router",
         "SequelizeJS",
         "REST API",
         "PassportJS",
@@ -149,7 +156,7 @@ const Portfolio = () => {
     {
       name: "Portfolio",
       description: "Web App for my personal website.",
-      site: "http://localhost:6005/",
+      site: "https://johnbarbachano.herokuapp.com/",
       github: "https://github.com/johnbarbachano0/r-portfolio",
       image: [
         port1,
@@ -175,7 +182,7 @@ const Portfolio = () => {
         "React Hook Form",
         "Yup",
         "Redux Toolkit",
-        "React Route",
+        "React Router",
         "SequelizeJS",
         "SwiperJS",
         "REST API",
@@ -214,6 +221,26 @@ const Portfolio = () => {
         "Yup",
         "Redux Toolkit",
         "React Navigation",
+      ],
+    },
+    {
+      name: "Apple Clone",
+      description: "Website clone of apple website landing page.",
+      site: "https://appleroboverse.herokuapp.com/",
+      github: "https://github.com/johnbarbachano0/r-apple_clone",
+      figma:
+        "https://www.figma.com/file/tXWh41aAQB9wkCp70dSI1r/Apple-Clone?node-id=0%3A1",
+      image: [app1, app2, app3, app4, app5, app6, app7],
+      tag: ["Mobile-Friendly"],
+      type: "web",
+      tech: [
+        "MySQL",
+        "ExpressJS",
+        "ReactJS",
+        "NodeJS",
+        "Material UI",
+        "Redux Toolkit",
+        "React Router",
       ],
     },
   ];
